@@ -1,0 +1,231 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/**************************/
+/* BELOW 1399px (Smaller desktops) */
+/**************************/
+@media (max-width: 88em) {
+  /* .header {
+    margin: 0 4rem !important;
+  } */
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+  .container {
+    max-width: 120rem;
+  }
+  .star-btns {
+    margin-left: 4rem !important;
+  }
+  .logos img {
+    height: 3.2rem !important;
+  }
+  .nav {
+    margin-left: 4rem !important;
+  }
+
+  .section-features {
+    max-width: 120rem;
+    padding: 5.2rem 4.8rem;
+    grid-template-columns: 1fr !important;
+  }
+  .features-text-box {
+    margin: 0 4.8rem;
+  }
+  .features-text-and-icons {
+    gap: 9.8rem !important;
+    margin: 0 4.8rem;
+  }
+}
+/**************************/
+/* BELOW 1200px (landscape tablets) */
+/**************************/
+@media (max-width: 75em) {
+  .how-div {
+    margin: 0 4.8rem !important;
+    display: grid;
+    grid-template-columns: 1fr !important;
+  }
+  .hero {
+    gap: 5.2rem !important;
+    text-align: center !important;
+    grid-template-columns: 1fr !important;
+  }
+  .btns-hero {
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-img {
+    margin-left: 12% !important;
+    width: 60% !important;
+  }
+  .img-how-box {
+    width: 80%;
+  }
+  .img-how-box:nth-child(1) {
+    grid-row: 2;
+  }
+  .star-btns {
+    display: none;
+  }
+
+  .grid--2--cols,
+  .grid--3--cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .section-pracing {
+    margin: 0 4.8rem;
+  }
+}
+
+/**************************/
+/* BELOW 944px (tablets) */
+/**************************/
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+  .logos img {
+    height: 2.4rem !important;
+  }
+  .logos {
+    gap: 1.2rem !important;
+  }
+  .primaty-btn {
+    margin-left: 55% !important;
+  }
+  .btn-mobile-nav {
+    display: block !important;
+    z-index: 999;
+  }
+  .nav-bar {
+    background-color: #7e3af2;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translatey(-100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* 1) hide it visually */
+    opacity: 0;
+
+    /* 2) make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /*  3) hide it frome screen readers */
+    visibility: hidden;
+  }
+  .nav-open .nav-bar {
+    opacity: 1;
+    z-index: 999;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+  .nav-item {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+  .nav-list:link,
+  .nav-list:visited {
+    font-size: 3rem;
+    color: #fff !important;
+  }
+  .nav-list:hover,
+  .nav-list:active {
+    color: #000 !important;
+  }
+  .icon-mobile-nav {
+    margin: 0 3.4rem !important;
+  }
+}
+
+/**************************/
+/* BELOW 704px (smaller-tablets) */
+/**************************/
+
+@media (max-width: 44em) {
+  .grid,
+  .grid--5--cols {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+  }
+
+  .grid--3--cols {
+    grid-template-columns: 1fr;
+  }
+  .header {
+    justify-content: space-between;
+  }
+  .primaty-btn {
+    margin-left: 44% !important;
+  }
+  .features-text-and-icons {
+    grid-template-columns: 1fr !important;
+  }
+  .testimonial-text {
+    width: 90% !important;
+  }
+  .customer-img {
+    width: 6.4rem !important;
+  }
+  .testimonial-name {
+    font-size: 1.8rem !important;
+  }
+  .testimonial-name-jop {
+    font-size: 1.6rem !important;
+  }
+  .pricing-card--complete::after {
+    top: 6 !important;
+    right: -9% !important;
+  }
+}
+
+/**************************/
+/* BELOW 544px (phones) */
+/**************************/
+
+@media (max-width: 34em) {
+  .pricing-card--complete::after {
+    top: 6;
+    right: -13% !important;
+  }
+  .section-feature-in {
+    margin: 1.2rem 4.8rem;
+  }
+  .logos img {
+    height: 1.6rem !important;
+  }
+  .logos {
+    gap: 0.9rem !important;
+  }
+  .header {
+    margin: 0 !important;
+  }
+  .primaty-btn {
+    display: none;
+  }
+  .grid {
+    row-gap: 2.4rem;
+  }
+  .testimonial-text {
+    font-size: 2rem !important;
+  }
+  .btn-hero {
+    padding: 1.4rem 1.8rem;
+  }
+  .btn-text {
+    font-size: 1.2rem !important;
+  }
+}
