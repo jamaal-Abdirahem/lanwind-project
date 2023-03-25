@@ -1,4 +1,4 @@
-# lanwind-project
+# landwind-project
 reponsive desing practice
 
 <a href="https://project-6-jamaal-abdirahem.netlify.app/"> livesite</a>
